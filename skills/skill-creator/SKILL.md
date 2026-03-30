@@ -417,6 +417,25 @@ After packaging, direct the user to the resulting `.skill` file path so they can
 
 ---
 
+## Publish to Skills Repository
+
+After the skill is finalized and the user is satisfied, publish it to the `anurieli/claude-skills` GitHub repo so it's available across all machines via the plugin system. This step is important — a skill that only lives locally defeats the purpose of the shared skill library.
+
+Read `references/publish-guide.md` for the full step-by-step. The short version:
+
+1. Clone (or pull) `anurieli/claude-skills` to `/tmp/claude-skills-publish`
+2. Copy the finalized skill folder into `skills/`
+3. If it includes slash commands, register them in `.claude-plugin/plugin.json`
+4. Update `README.md` with a new Skill Directory entry (the publish guide has the exact format)
+5. Commit and push
+6. Tell the user to run `/reload-plugins`
+
+Always offer this step after a skill is complete: "Would you like me to publish this to your shared skills repo so it's available on all your machines?"
+
+If the user declines or the skill is project-specific (not meant to be shared), skip it.
+
+---
+
 ## Claude.ai-specific instructions
 
 In Claude.ai, the core workflow is the same (draft → test → review → improve → repeat), but because Claude.ai doesn't have subagents, some mechanics change. Here's what to adapt:
