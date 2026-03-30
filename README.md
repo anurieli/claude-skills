@@ -1,6 +1,6 @@
 # Claude Code Skills
 
-Shared Claude Code skills and commands. Clone on any machine and run the install script to symlink everything into `~/.claude/`.
+Shared Claude Code skills and commands for use across machines and Claude Code instances.
 
 ## Skills
 
@@ -26,7 +26,53 @@ Shared Claude Code skills and commands. Clone on any machine and run the install
 | `/update-prd` | Update PRD from README |
 | `/upload-article` | Upload blog articles |
 
-## Install
+---
+
+## Install via Plugin (Recommended)
+
+The plugin system is the easiest way to install on any machine. Two commands:
+
+```
+/plugin marketplace add anurieli/claude-skills
+/plugin install claude-skills@anurieli-skills
+```
+
+### Auto-Discovery (Optional)
+
+To pre-register the marketplace so you only need the install step, add this to `~/.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "anurieli-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anurieli/claude-skills"
+      }
+    }
+  }
+}
+```
+
+Then just run:
+
+```
+/plugin install claude-skills@anurieli-skills
+```
+
+### Updating
+
+After new skills are pushed to the repo:
+
+```
+/reload-plugins
+```
+
+---
+
+## Install via Script (Legacy)
+
+Clone the repo and symlink everything into `~/.claude/`:
 
 ```bash
 git clone https://github.com/anurieli/claude-skills.git ~/claude-skills
@@ -34,7 +80,7 @@ cd ~/claude-skills
 ./install.sh
 ```
 
-## Update
+### Update
 
 ```bash
 cd ~/claude-skills
@@ -42,7 +88,7 @@ git pull
 ./install.sh
 ```
 
-## Uninstall
+### Uninstall
 
 ```bash
 cd ~/claude-skills
