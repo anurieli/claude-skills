@@ -2,7 +2,9 @@
 
 Shared Claude Code skills and commands for use across machines and Claude Code instances.
 
-## Skills
+## What's Included
+
+### Skills
 
 | Skill | Description |
 |-------|-------------|
@@ -13,7 +15,7 @@ Shared Claude Code skills and commands for use across machines and Claude Code i
 | `schedule` | Create scheduled/recurring tasks |
 | `skill-creator` | Create, modify, and evaluate skills |
 
-## Commands
+### Commands
 
 | Command | Description |
 |---------|-------------|
@@ -28,18 +30,13 @@ Shared Claude Code skills and commands for use across machines and Claude Code i
 
 ---
 
-## Install via Plugin (Recommended)
+## Setup
 
-The plugin system is the easiest way to install on any machine. Two commands:
+There's one manual step, then Claude handles the rest.
 
-```
-/plugin marketplace add anurieli/claude-skills
-/plugin install claude-skills@anurieli-skills
-```
+### Step 1: Register the marketplace (you do this once)
 
-### Auto-Discovery (Optional)
-
-To pre-register the marketplace so you only need the install step, add this to `~/.claude/settings.json`:
+Open `~/.claude/settings.json` and add `anurieli-skills` to your `extraKnownMarketplaces`. If the file doesn't exist or is empty, create it with this content:
 
 ```json
 {
@@ -54,43 +51,42 @@ To pre-register the marketplace so you only need the install step, add this to `
 }
 ```
 
-Then just run:
+If the file already has content, just add the `anurieli-skills` entry inside the existing `extraKnownMarketplaces` block (create the block if it doesn't exist).
+
+### Step 2: Install the plugin (tell Claude to do it)
+
+Open Claude Code and paste this:
 
 ```
-/plugin install claude-skills@anurieli-skills
+Install the claude-skills plugin from the anurieli-skills marketplace. Run: /plugin install claude-skills@anurieli-skills
 ```
+
+That's it. All skills and commands are now available.
 
 ### Updating
 
-After new skills are pushed to the repo:
+When new skills are added to this repo, tell Claude:
 
 ```
-/reload-plugins
+Reload plugins to pull the latest skills. Run: /reload-plugins
 ```
 
 ---
 
-## Install via Script (Legacy)
+## Why the manual step?
 
-Clone the repo and symlink everything into `~/.claude/`:
+`settings.json` controls which marketplaces Claude Code trusts. Editing it requires you (the human) to opt in — Claude can't modify its own settings file to add a new marketplace. Once the marketplace is registered, Claude can install and update plugins from it on its own.
+
+---
+
+## Legacy Install (Script)
+
+If you prefer symlinks over the plugin system:
 
 ```bash
 git clone https://github.com/anurieli/claude-skills.git ~/claude-skills
-cd ~/claude-skills
-./install.sh
+cd ~/claude-skills && ./install.sh
 ```
 
-### Update
-
-```bash
-cd ~/claude-skills
-git pull
-./install.sh
-```
-
-### Uninstall
-
-```bash
-cd ~/claude-skills
-./uninstall.sh
-```
+Update: `cd ~/claude-skills && git pull && ./install.sh`
+Uninstall: `cd ~/claude-skills && ./uninstall.sh`
