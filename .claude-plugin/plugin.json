@@ -1,0 +1,20 @@
+{
+  "name": "claude-skills",
+  "version": "1.0.0",
+  "description": "Ariel's shared Claude Code skills and commands",
+  "author": {
+    "name": "Ariel Nurieli"
+  },
+  "repository": "https://github.com/anurieli/claude-skills",
+  "skills": "./skills/",
+  "commands": [
+    "./commands/design-system-creation-prompt.md",
+    "./commands/find-edge-cases.md",
+    "./commands/fix.md",
+    "./commands/teach.md",
+    "./commands/up-next.md",
+    "./commands/update-claude-md.md",
+    "./commands/update-prd.md",
+    "./commands/upload-article.md"
+  ]
+}

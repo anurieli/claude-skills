@@ -1,0 +1,16 @@
+{
+  "name": "anurieli-skills",
+  "owner": {
+    "name": "Ariel Nurieli"
+  },
+  "metadata": {
+    "description": "Ariel's shared Claude Code skills and commands"
+  },
+  "plugins": [
+    {
+      "name": "claude-skills",
+      "source": ".",
+      "description": "All shared skills and commands — call-to-linear, conversation-packager, internal-comms, linear-project-generator, schedule, skill-creator, and legacy commands"
+    }
+  ]
+}
