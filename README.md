@@ -39,6 +39,24 @@ Reload plugins to pull the latest skills. Run: /reload-plugins
 
 ## Skill Directory
 
+### create-workflow
+
+**What it does:** A workflow composer that takes a goal, discovers which existing skills can serve it, builds any missing skills, and packages everything into the right container — usually an agent definition (`.claude/agents/`) that bundles skills together via the `skills` frontmatter field. Think of it as a staffing agency: you describe the role, it recruits existing capabilities and trains new ones for the gaps, then hands back a ready-to-work agent.
+
+**When to use it:** When you want to automate a multi-step process, create a new agent, or compose multiple skills into a single workflow. Say things like "I want to automate what happens after client calls", "create a workflow for onboarding new clients", "build me an agent that handles deploy tracking", or "I keep doing X manually."
+
+**How it works:**
+1. Asks about your goal — the end result, not the implementation
+2. Breaks it into a workflow sketch (ordered capability steps)
+3. Scans local skills, local agents, and the npx ecosystem for matches
+4. Presents a discovery report mapping each step to existing or missing capabilities
+5. For gaps: classifies them (template, integration, logic, script) and builds lightweight skills
+6. Packages the result — either tells you "you already have this", creates a new skill, or generates an agent definition with `skills: [...]` that wires everything together
+
+**Requirements:** None — works with whatever skills and MCP servers you already have configured. The more skills installed, the more it can compose.
+
+---
+
 ### call-to-linear
 
 **What it does:** Syncs meeting call notes from Fireflies into a Linear project. It fetches the call transcript/summary, cross-references it against existing Linear tasks and linked project documents, then creates new tasks, updates existing ones, and produces changelogs for documents that need updating.
