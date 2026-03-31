@@ -1,14 +1,14 @@
 {
-  "name": "anurieli-skills",
+  "name": "claude-leadership-pack",
   "owner": {
     "name": "Ariel Nurieli"
   },
   "metadata": {
-    "description": "Ariel's shared Claude Code skills and commands"
+    "description": "The Claude Leadership Pack — shared skills and commands for project management, internal comms, skill creation, and autonomous development workflows"
   },
   "plugins": [
     {
-      "name": "claude-skills",
+      "name": "claude-leadership-pack",
       "source": "./",
       "description": "All shared skills and commands — call-to-linear, conversation-packager, internal-comms, linear-project-generator, schedule, skill-creator, and legacy commands"
     }

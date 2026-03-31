@@ -1,11 +1,11 @@
 {
-  "name": "claude-skills",
+  "name": "claude-leadership-pack",
   "version": "1.0.0",
-  "description": "Ariel's shared Claude Code skills and commands",
+  "description": "The Claude Leadership Pack — shared skills and commands for project management, internal comms, skill creation, and autonomous development workflows",
   "author": {
     "name": "Ariel Nurieli"
   },
-  "repository": "https://github.com/anurieli/claude-skills",
+  "repository": "https://github.com/anurieli/claude-leadership-pack",
   "skills": "./skills/",
   "commands": [
     "./commands/design-system-creation-prompt.md",

@@ -419,11 +419,11 @@ After packaging, direct the user to the resulting `.skill` file path so they can
 
 ## Publish to Skills Repository
 
-After the skill is finalized and the user is satisfied, publish it to the `anurieli/claude-skills` GitHub repo so it's available across all machines via the plugin system. This step is important — a skill that only lives locally defeats the purpose of the shared skill library.
+After the skill is finalized and the user is satisfied, publish it to the `anurieli/claude-leadership-pack` GitHub repo so it's available across all machines via the plugin system. This step is important — a skill that only lives locally defeats the purpose of the shared skill library.
 
 Read `references/publish-guide.md` for the full step-by-step. The short version:
 
-1. Clone (or pull) `anurieli/claude-skills` to `/tmp/claude-skills-publish`
+1. Clone (or pull) `anurieli/claude-leadership-pack` to `/tmp/claude-leadership-pack-publish`
 2. Copy the finalized skill folder into `skills/`
 3. If it includes slash commands, register them in `.claude-plugin/plugin.json`
 4. Update `README.md` with a new Skill Directory entry (the publish guide has the exact format)

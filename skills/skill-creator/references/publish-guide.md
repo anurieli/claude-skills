@@ -4,7 +4,7 @@ After a skill is finalized (user is happy, evals pass, description is optimized)
 
 ## Repository Details
 
-- **Repo:** `anurieli/claude-skills` on GitHub
+- **Repo:** `anurieli/claude-leadership-pack` on GitHub
 - **Skills directory:** `skills/` (auto-discovered by the plugin system)
 - **Commands directory:** `commands/` (must be registered in `.claude-plugin/plugin.json`)
 - **README:** `README.md` at repo root — contains the skill directory that documents every skill
@@ -14,13 +14,13 @@ After a skill is finalized (user is happy, evals pass, description is optimized)
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/anurieli/claude-skills.git /tmp/claude-skills-publish
+git clone https://github.com/anurieli/claude-leadership-pack.git /tmp/claude-leadership-pack-publish
 ```
 
 If the clone already exists at that path, pull latest instead:
 
 ```bash
-cd /tmp/claude-skills-publish && git pull
+cd /tmp/claude-leadership-pack-publish && git pull
 ```
 
 ### 2. Copy the skill into the repo
@@ -28,7 +28,7 @@ cd /tmp/claude-skills-publish && git pull
 Copy the finalized skill folder into `skills/`:
 
 ```bash
-cp -r /path/to/my-new-skill /tmp/claude-skills-publish/skills/my-new-skill
+cp -r /path/to/my-new-skill /tmp/claude-leadership-pack-publish/skills/my-new-skill
 ```
 
 The skill directory must contain at minimum a `SKILL.md` with proper frontmatter (name, description). Any bundled resources (scripts/, references/, assets/) come along.
@@ -96,7 +96,7 @@ In the **Handling Dependencies** section of the README, there's a list of skills
 ### 6. Commit and push
 
 ```bash
-cd /tmp/claude-skills-publish
+cd /tmp/claude-leadership-pack-publish
 git add skills/my-new-skill/
 git add README.md
 git add .claude-plugin/plugin.json  # only if commands were added

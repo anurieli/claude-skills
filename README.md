@@ -1,6 +1,6 @@
-# Claude Code Skills
+# Claude Leadership Pack
 
-Shared Claude Code skills and commands for use across machines and Claude Code instances.
+Shared Claude Code skills and commands for project management, internal comms, skill creation, and autonomous development workflows.
 
 ---
 
@@ -9,20 +9,20 @@ Shared Claude Code skills and commands for use across machines and Claude Code i
 Open Claude Code and paste this:
 
 ```
-Set up the anurieli/claude-skills plugin marketplace. Do the following:
+Set up the claude-leadership-pack plugin. Do the following:
 
 1. Read ~/.claude/settings.json (create it if it doesn't exist)
 2. Add this entry to the "extraKnownMarketplaces" object (create the object if it doesn't exist):
 
-   "anurieli-skills": {
+   "claude-leadership-pack": {
      "source": {
        "source": "github",
-       "repo": "anurieli/claude-skills"
+       "repo": "anurieli/claude-leadership-pack"
      }
    }
 
 3. Write the updated settings.json
-4. Run: /plugin install claude-skills@anurieli-skills
+4. Run: /plugin install claude-leadership-pack@claude-leadership-pack
 ```
 
 That's it. Claude does everything.
@@ -326,9 +326,9 @@ These skills and commands have **zero external dependencies** — they work imme
 If you prefer symlinks over the plugin system:
 
 ```bash
-git clone https://github.com/anurieli/claude-skills.git ~/claude-skills
-cd ~/claude-skills && ./install.sh
+git clone https://github.com/anurieli/claude-leadership-pack.git ~/claude-leadership-pack
+cd ~/claude-leadership-pack && ./install.sh
 ```
 
-Update: `cd ~/claude-skills && git pull && ./install.sh`
-Uninstall: `cd ~/claude-skills && ./uninstall.sh`
+Update: `cd ~/claude-leadership-pack && git pull && ./install.sh`
+Uninstall: `cd ~/claude-leadership-pack && ./uninstall.sh`
