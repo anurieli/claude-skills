@@ -8,8 +8,8 @@
   },
   "plugins": [
     {
-      "name": "claude-leadership-pack",
-      "source": ".",
+      "name": "leadership-pack",
+      "source": "./",
       "description": "All shared skills and commands — call-to-linear, conversation-packager, internal-comms, linear-project-generator, schedule, skill-creator, and legacy commands"
     }
   ]

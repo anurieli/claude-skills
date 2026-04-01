@@ -22,7 +22,7 @@ Set up the claude-leadership-pack plugin. Do the following:
    }
 
 3. Write the updated settings.json
-4. Run: /plugin install claude-leadership-pack@claude-leadership-pack
+4. Run: /plugin install leadership-pack@claude-leadership-pack
 ```
 
 That's it. Claude does everything.
