@@ -3,14 +3,12 @@
   "owner": {
     "name": "Ariel Nurieli"
   },
-  "metadata": {
-    "description": "The Claude Leadership Pack — shared skills and commands for project management, internal comms, skill creation, and autonomous development workflows"
-  },
   "plugins": [
     {
       "name": "leadership-pack",
       "source": "./",
-      "description": "All shared skills and commands — call-to-linear, conversation-packager, internal-comms, linear-project-generator, schedule, skill-creator, and legacy commands"
+      "description": "The Claude Leadership Pack — shared skills and commands for project management, internal comms, skill creation, and autonomous development workflows",
+      "version": "1.0.0"
     }
   ]
 }
